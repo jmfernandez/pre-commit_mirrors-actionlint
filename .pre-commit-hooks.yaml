@@ -1,7 +1,7 @@
 - id: actionlint
   name: Lint GitHub Actions workflow files
   description: Runs actionlint to lint GitHub Actions workflow files
-  language: system
+  language: python
   types: ["yaml"]
   files: "^.github/workflows/"
   entry: actionlint
