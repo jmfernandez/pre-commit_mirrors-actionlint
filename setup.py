@@ -14,6 +14,8 @@ with open(os.path.join(setupDir, ".version")) as vH:
 machine = platform.machine()
 if machine == "x86_64":
     machine = "amd64"
+elif machine == "aarch64":
+    machine = "arm64"
 system = platform.system().lower()
 download_link = f"https://github.com/rhysd/actionlint/releases/download/v{version}/actionlint_{version}_{system}_{machine}.tar.gz"
 local_filename, headers = urllib.request.urlretrieve(download_link)
